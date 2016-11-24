@@ -1,19 +1,13 @@
 # Markdown
-set :markdown_engine, :redcarpet
-set :markdown,
-    fenced_code_blocks: true,
-    smartypants: true,
-    disable_indented_code_blocks: true,
-    prettify: true,
-    tables: true,
-    with_toc_data: true,
-    no_intra_emphasis: true
+set :markdown_engine, :kramdown
 
 # Assets
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
+
+activate :i18n, mount_at_root: :ru, langs: [:en, :ru]
 
 # Activate the syntax highlighter
 activate :syntax
@@ -37,6 +31,15 @@ configure :build do
   # activate :relative_assets
   # activate :asset_hash
   # activate :gzip
+end
+
+activate :deploy do |deploy|
+  deploy.build_before    = true
+  deploy.deploy_method   = :sftp
+  deploy.host            = 'app.salesap.ru'
+  deploy.port            = 22
+  deploy.path            = '/mnt/sites/salesap_api/www'
+  deploy.user            = 'salesap_api'
 end
 
 # Deploy Configuration
