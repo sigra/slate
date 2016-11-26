@@ -3,6 +3,9 @@ title: API Документация
 
 language_tabs:
   - shell
+  
+includes:
+  - deals
 
 toc_footers:
   - <a href='https://app.salesap.ru'>Получить доступ к API</a>
@@ -42,7 +45,7 @@ search: true
 > Чтобы авторизоваться используйте следующий код:
 
 ~~~ shell
-curl "https://salesap.ru/api/v1/deals.json"
+curl "https://app.salesap.ru/api/v1/deals" \
   -H "Authorization: Bearer api_token"
 ~~~ 
 
