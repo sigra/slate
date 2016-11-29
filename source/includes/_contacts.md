@@ -178,3 +178,4 @@ curl "https://app.salesap.ru/api/v1/contacts?include=responsible,contact-type" \
 Источник            | source           | `sources`
 Статус              | status           | `contact-statuses`
 Тип                 | contact-type     | `contact-types`
+Сделки              | deals            | `deals`
