@@ -6,6 +6,7 @@ language_tabs:
   
 includes:
   - contacts
+  - companies
   - deals
 
 toc_footers:

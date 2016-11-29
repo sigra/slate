@@ -64,7 +64,7 @@ URL               | `/api/v1/contacts`
         },
         "created-at":"2016-11-26T12:07:51.572+03:00",
         "updated-at":"2016-11-26T12:07:51.572+03:00",
-        "archived-at":nil
+        "archived-at":null
       }
    }
 }

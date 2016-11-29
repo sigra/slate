@@ -50,7 +50,7 @@ URL               | `/api/v1/deals`
         "description":"двушка в 15м доме",
         "amount":4700000.0,
         "number":16,
-        "planned-at":nil,
+        "planned-at":null,
         "finished-at":"2016-11-26",
         "customs":{
           "custom-1":"5 собак",
@@ -58,7 +58,7 @@ URL               | `/api/v1/deals`
         },
         "created-at":"2016-11-26T12:07:51.572+03:00",
         "updated-at":"2016-11-26T12:07:51.572+03:00",
-        "archived-at":nil
+        "archived-at":null
       }
    }
 }
