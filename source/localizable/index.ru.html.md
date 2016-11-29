@@ -5,6 +5,7 @@ language_tabs:
   - shell
   
 includes:
+  - contacts
   - deals
 
 toc_footers:

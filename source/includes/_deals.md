@@ -90,13 +90,13 @@ archived-at    | `datetime`  | `2016-11-26T12:07:51.572+03:00` | да | Дата
         "responsible":{
           "links":{
             "self":"/api/v1/deals/1/relationships/responsible",
-            "related":"/api/v1/deals/135/responsible"
+            "related":"/api/v1/deals/1/responsible"
           }
         },
         "stage-category":{
           "links":{
             "self":"/api/v1/deals/1/relationships/stage-category",
-            "related":"/api/v1/deals/135/stage-category"
+            "related":"/api/v1/deals/1/stage-category"
           }
         },
       }
@@ -123,7 +123,7 @@ curl "https://app.salesap.ru/api/v1/deals?include=source,responsible" \
 Этап                | stage            | `stages` 
 Воронка             | stage-category   | `stage-categories`
 Источник            | source           | `sources`
-Статус              | status           | `status`
+Статус              | status           | `deal-statuses`
 Причина поражения   | loss-reason      | `loss-reasons`
 Конкурент поражения | loss-competitor  | `loss-competirors`
 Территория          | area             | `area`
