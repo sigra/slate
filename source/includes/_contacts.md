@@ -50,8 +50,9 @@ URL               | `/api/v1/contacts`
 > Ниже приведен пример формата данных, в реальном ответе будут присутствовать
 все перечисленные аттрибуты
 
-~~~ shell
-{ "data": {
+~~~json
+{ 
+  "data": {
       "type":"contacts",
       "id":1,
       "attributes":{
@@ -139,8 +140,9 @@ skype          | `string`    |                 | да     | Skype
 
 > Пример данных (перечислены не все связи)
 
-~~~ shell
-{ "data": {
+~~~json
+{ 
+  "data": {
       "type":"contacts",
       "id":1,
       "relationships":{
@@ -155,7 +157,7 @@ skype          | `string`    |                 | да     | Skype
             "self":"/api/v1/contacts/1/relationships/contact-type",
             "related":"/api/v1/contacts/1/contact-type"
           }
-        },
+        }
       }
    }
 }

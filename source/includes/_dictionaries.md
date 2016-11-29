@@ -1,14 +1,6 @@
 # Справочники
 {: #dictionaries }
 
-> Получить список своих полей для сделок
-
-~~~shell
-curl "https://app.salesap.ru/api/v1/custom-fields" \
-  -d "filter[resources]=deals" \
-  -H "Authorization: Bearer api_token"
-~~~
-
 > Получить список этапов сделок
 
 ~~~shell
@@ -62,7 +54,62 @@ URL               | `/api/v1/{json_api_type}`
 Редактирование    | `PATCH /api/v1/{json_api_type}/{id}`
 Удаление          | `DELETE /api/v1/{json_api_type}/{id}`
 
-<aside class="notify">
+<aside class="notice">
 Вместо <code>json_api_type</code> используйте название необходимого справочника из таблицы
 <a href="#dictionaries">выше</a>.
 </aside>
+
+## Свои поля
+{: #custom-fields}
+
+### Аттрибуты
+
+~~~json
+{
+  "data": {
+    "id": "1",
+    "type": "custom-fields",
+    "links": {
+      "self": "http://localhost:3000/api/v1/custom-fields/1"
+    },
+    "attributes": {
+      "created-at": "2016-01-14T17:18:25.675+03:00",
+      "updated-at": "2016-07-15T07:29:05.581+03:00",
+      "name": "Порода коровы",
+      "required": false,
+      "resource-name": "deals",
+      "field-type": "text",
+      "attribute-name": "custom-1"
+    }
+  }
+}
+~~~
+
+Имя            | Тип         | Пример          | Запись | Описание
+-------------- | ----------- | --------------- | ------ | --------
+name           | `string`    | День рождения   | да     | Название
+required       | `boolean`   | true            | да     | Обязательное поле
+resource-name  | `string`    | `deals`         | да     | Расширяемый ресурс
+field-type     | `string`    | `text`          | да     | Тип поля
+attribute-name | `string`    | `custom-2`      | нет    | Имя аттрибута для JSON API
+
+### Ограничения по значениям
+
+Аттрибут       | Варианты
+-------------- | ---------
+resource-name  | `contacts`, `companies`, `deals`, `orders`, `products`, `users`
+field-type     | `text`, `date`, `number`, `select`
+
+### Фильтры
+
+> Получить список своих полей для сделок
+
+~~~shell
+curl "https://app.salesap.ru/api/v1/custom-fields" \
+  -d "filter[resources]=deals" \
+  -H "Authorization: Bearer api_token"
+~~~
+
+Фильтр         | Описание                                      | Пример
+-------------- | --------------------------------------------- | --------------------------
+resources      | Вывести поля по определенному `resource-name` | `filter[resources]=deals`

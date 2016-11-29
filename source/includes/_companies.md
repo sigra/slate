@@ -47,8 +47,9 @@ URL               | `/api/v1/companies`
 ## Аттрибуты
 {: #companies-attributes}
 
-~~~ shell
-{ "data": {
+~~~ json
+{ 
+    "data": {
       "type":"companies",
       "id":1,
       "attributes":{
@@ -202,8 +203,9 @@ manager-position  | `string`    | Официант        | да     | Долж�
 
 > Пример данных (перечислены не все связи)
 
-~~~ shell
-{ "data": {
+~~~json
+{ 
+    "data": {
       "type":"companies",
       "id":1,
       "relationships":{
@@ -218,7 +220,7 @@ manager-position  | `string`    | Официант        | да     | Долж�
             "self":"/api/v1/contacts/1/relationships/company-type",
             "related":"/api/v1/contacts/1/company-type"
           }
-        },
+        }
       }
    }
 }

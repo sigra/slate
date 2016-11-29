@@ -41,8 +41,9 @@ URL               | `/api/v1/deals`
 ## Аттрибуты
 {: #deals-attributes}
 
-~~~ shell
-{ "data": {
+~~~json
+{ 
+  "data": {
       "type":"deals",
       "id":1,
       "attributes":{
@@ -82,8 +83,9 @@ archived-at    | `datetime`  | `2016-11-26T12:07:51.572+03:00` | да | Дата
 
 > Пример данных (перечислены не все связи)
 
-~~~ shell
-{ "data": {
+~~~json
+{ 
+  "data": {
       "type":"deals",
       "id":1,
       "relationships":{
@@ -98,7 +100,7 @@ archived-at    | `datetime`  | `2016-11-26T12:07:51.572+03:00` | да | Дата
             "self":"/api/v1/deals/1/relationships/stage-category",
             "related":"/api/v1/deals/1/stage-category"
           }
-        },
+        }
       }
    }
 }
