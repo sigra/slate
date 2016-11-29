@@ -8,6 +8,7 @@ includes:
   - contacts
   - companies
   - deals
+  - dictionaries
 
 toc_footers:
   - <a href='https://app.salesap.ru'>Получить доступ к API</a>
